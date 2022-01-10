@@ -1,23 +1,21 @@
 ## Description of the Analytic:
 
-Generates a difference Point Cloud, from a Point Cloud to a reference (that can be a Point Cloud or onother 3d format)
+Generates a sampled Point Cloud (.las), from a mesh file (.obj or other formats)
 
 
 ## Inputs:
 
-The PointCloud (.las) 
-The reference (.las)
+The mesh file (.obj, .glb)
 
 
 ## Parameters:
 
-Min: Min distance to display in the Difference Point Cloud
-Max: Max distance to display in the Difference Point Cloud
+Number of points (Default: 500 000)
 
 
 ## Outputs:
 
-A difference Point Cloud (.las)
+A sampled Point Cloud (.las)
 
 
 ## Analytics creation
@@ -37,7 +35,7 @@ Credentials to access the docker registry used still have to be created from the
 
 ## Fix-me:
 
-The scripts generates a raster (output.las) as a final result.
+* The scripts generates a raster (output.las) as a final result.
 A dataset is created and the output.las component uplaoded from the docker using the SDK (cf. uplaod_dataset.py file)
 This requires credentials to be added to the script_dir in a file named : config-connections.json
 with the follwing structure:
@@ -49,3 +47,8 @@ with the follwing structure:
 }
 
 this is a quick-fix as the transfert of the generated results (as described in the outputs.json file) doesn't seem to work properly
+
+
+* The file type for input selection of the analytics is 'mesh'
+However, in the GUI Selector only glb files show up. .obj files do not.
+Quick-fix: add a parameter corresponding to the .obj file and fetch it from the docker using the SDK
