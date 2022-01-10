@@ -1,0 +1,28 @@
+{
+	"inputs":{
+"input_obj": {"id": "5d823411951fa84feed25e8e",
+"_id": "5d823411951fa84feed25e8e",
+"ingestion": {"status": "completed"},
+"categories": [],
+"hidden": false,
+"published": true,
+"source": {"name": "data-manager"},
+"project": "5d7fa43ad229a876a79f2b3f",
+"format": "obj",
+"components": [
+	{"status": "available", "name": "mesh", "checksum": "02583d4dd317a28d76224653170cfffc", "filename": "untitled1.obj", "path": "/home/work_dir/untitled1.obj", "size": 224622},
+	{"status": "available", "name": "texture_0", "checksum": "0b429c357ff81febedccfe62d4c74bc3", "filename": "MetalCorrugatedIronSheet002_AO_3K_SPECULAR.jpg", "size": 531637},
+	{"status": "available", "name": "material", "checksum": "266ee9cea2bbffd3d78a5de4aafb2a39", "filename": "untitled1.mtl", "size": 2157},
+	{"status": "available", "name": "texture_1", "checksum": "a298bccaaf4a062bb8c2666163f4ecd9", "filename": "Metal_Corrugated_008_basecolor.jpg", "size": 238581}
+],
+"name": "Delair BIM",
+"type": "mesh",
+"horizontal_srs_wkt": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+"vertical_srs_wkt": "VERT_CS[\"EGM96 geoid (meters)\",VERT_DATUM[\"EGM96 geoid\",2005,EXTENSION[\"PROJ4_GRIDS\",\"egm96_15.gtx\"],AUTHORITY[\"EPSG\",\"5171\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Up\",UP]]",
+
+"offset": [379601.0931, 4823408.636, 212.29],
+"company": "5c1a2567b3c575583e8a650d", "creation_user": "5cb08680b8488946b7dcbe9d", "modification_user": "5cb08680b8488946b7dcbe9d", "creation_date": "2019-09-18T13:41:37.549Z", "modification_date": "2019-09-18T13:41:39.740Z", "publication_date": "2019-09-18T13:41:37.549Z", "publication_user": "5cb08680b8488946b7dcbe9d"}
+
+	},
+	"parameters":{}
+}
