@@ -1,5 +1,0 @@
-laspy
-numpy
-open3d
-matplotlib
-alteia

@@ -59,7 +59,7 @@ def main():
 		n_points = float(n_points) #to float
 	
 
-	mesh2pc(input_path, str(WORKING_DIR)+'/', offsets, hsrs, vsrs)
+	mesh2pc(input_path, str(WORKING_DIR)+'/', n_points, hsrs, vsrs)
 
 
 	logging.debug('Generating outputs.json file...')

@@ -10,10 +10,7 @@
 "project": "5d7fa43ad229a876a79f2b3f",
 "format": "obj",
 "components": [
-	{"status": "available", "name": "mesh", "checksum": "02583d4dd317a28d76224653170cfffc", "filename": "untitled1.obj", "path": "/home/work_dir/untitled1.obj", "size": 224622},
-	{"status": "available", "name": "texture_0", "checksum": "0b429c357ff81febedccfe62d4c74bc3", "filename": "MetalCorrugatedIronSheet002_AO_3K_SPECULAR.jpg", "size": 531637},
-	{"status": "available", "name": "material", "checksum": "266ee9cea2bbffd3d78a5de4aafb2a39", "filename": "untitled1.mtl", "size": 2157},
-	{"status": "available", "name": "texture_1", "checksum": "a298bccaaf4a062bb8c2666163f4ecd9", "filename": "Metal_Corrugated_008_basecolor.jpg", "size": 238581}
+	{"status": "available", "name": "mesh", "checksum": "02583d4dd317a28d76224653170cfffc", "filename": "output_voies.glb", "path": "/home/work_dir/output_voies.glb", "size": 224622}
 ],
 "name": "Delair BIM",
 "type": "mesh",

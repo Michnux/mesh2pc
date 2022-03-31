@@ -2,6 +2,9 @@
 *.tif
 *.aux.xml
 *.pyc
+*.ply
+*.obj
+*.glb
 
 DockerRegistryCredentials.json
 config-connections.json

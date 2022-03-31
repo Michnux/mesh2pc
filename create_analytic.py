@@ -41,7 +41,7 @@ sdk.analytics.create(name="alteiademo/mesh2pc",
 		"name": "n_points",
 		"display_name": "Number of points",
 		"description": "Number of points of point cloud (default: 500.000)",
-		"required": True,
+		"required": False,
 		"scheme": {
 			"type": "string"#, "pattern": "^[0-9]$"
 		}
