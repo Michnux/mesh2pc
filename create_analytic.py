@@ -2,20 +2,20 @@ import alteia
 
 
 
-sdk = alteia.SDK(config_path='./config-connections.json')
+sdk = alteia.SDK(config_path='./config-connections-setec.json')
 
 
-analytic = sdk.analytics.search(name="alteiademo/mesh2pc")
+analytic = sdk.analytics.search(name="seteccapture/mesh2pc_setec")
 if len(analytic)>0:
 	analytic=analytic[0]
 	sdk.analytics.delete(analytic=analytic.id)
 
-sdk.analytics.create(name="alteiademo/mesh2pc",
+sdk.analytics.create(name="seteccapture/mesh2pc_setec",
 	version="1.0.0",
 	display_name="mesh2pc",
 	description="Generates a Point Cloud from a Mesh file",
-	docker_image="registry-1.docker.io/michaeldelagarde/mesh2pc:latest",
-	company="5c1a2567b3c575583e8a650d",
+	docker_image="registry-1.docker.io/michaeldelagarde/mesh2pc_setec:latest",
+	company="61386c9dd215430006a73e57",
 	instance_type='small',
 	volume_size=20,
 	inputs=[{
@@ -67,5 +67,4 @@ sdk.analytics.create(name="alteiademo/mesh2pc",
 	# 	"required": False
 	# }
 	],
-	tags=["croquette"],
 	groups=["UTILS"])

@@ -4,7 +4,7 @@ import alteia
 
 def upload_dataset(file_path, project_id, mission_id, script_dir, hsrs, vsrs):
 
-	sdk = alteia.SDK(config_path=script_dir+'/config-connections.json')
+	sdk = alteia.SDK(config_path=script_dir+'/config-connections-setec.json')
 
 	new_dataset = sdk.datasets.create_pcl_dataset(	name='sampled point cloud',
 														project=project_id,
