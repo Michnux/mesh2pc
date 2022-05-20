@@ -2,20 +2,20 @@ import alteia
 
 
 
-sdk = alteia.SDK(config_path='./config-connections-setec.json')
+sdk = alteia.SDK(config_path='./config-connections.json')
 
 
-analytic = sdk.analytics.search(name="seteccapture/mesh2pc_setec")
+analytic = sdk.analytics.search(name="alteiademo/mesh2pc")
 if len(analytic)>0:
 	analytic=analytic[0]
 	sdk.analytics.delete(analytic=analytic.id)
 
-sdk.analytics.create(name="seteccapture/mesh2pc_setec",
+sdk.analytics.create(name="alteiademo/mesh2pc",
 	version="1.0.0",
 	display_name="mesh2pc",
 	description="Generates a Point Cloud from a Mesh file",
-	docker_image="registry-1.docker.io/michaeldelagarde/mesh2pc_setec:latest",
-	company="61386c9dd215430006a73e57",
+	docker_image="registry-1.docker.io/michaeldelagarde/mesh2pc:latest",
+	company="5c1a2567b3c575583e8a650d",
 	instance_type='small',
 	volume_size=20,
 	inputs=[{
@@ -48,23 +48,23 @@ sdk.analytics.create(name="seteccapture/mesh2pc_setec",
 	 },
 	],
 	deliverables=[
-	# {
-	# 	"name": "outputtif",
-	# 	"display_name": "outputtif",
-	# 	"description": "outputtif",
-	# 	"scheme": {
-	# 		"type": "string", "pattern": "^[0-9a-f]{24}$"
-	# 	},
-	# 	"source": {
-	# 		"service": "data-manager",
-	# 		"resource": "dataset",
-	# 		"scheme": {
-	# 			"type": "object",
-	# 			"properties": {"type": {"const": "raster"}},
-	# 			"required": ["type"]
-	# 		},
-	# 	},
-	# 	"required": False
-	# }
+	{
+		"name": "output",
+		"display_name": "output",
+		"description": "output",
+		"scheme": {
+			"type": "string", "pattern": "^[0-9a-f]{24}$"
+		},
+		"source": {
+			"service": "data-manager",
+			"resource": "dataset",
+			"scheme": {
+				"type": "object",
+				"properties": {"type": {"const": "pcl"}},
+				"required": ["type"]
+			},
+		},
+		"required": True
+	}
 	],
-	groups=["UTILS"])
+	groups=["Tuto"])
