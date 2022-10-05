@@ -5,6 +5,7 @@
 *.ply
 *.obj
 *.glb
+*.json
 
 DockerRegistryCredentials.json
 config-connections.json

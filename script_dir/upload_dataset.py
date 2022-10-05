@@ -4,7 +4,20 @@ import alteia
 
 def upload_dataset(file_path, project_id, mission_id, script_dir, hsrs, vsrs):
 
-	sdk = alteia.SDK(config_path=script_dir+'/config-connections.json')
+	url = os.getenv("ALTEIA_PLATEFORM_URL")
+		client_id = os.getenv("ALTEIA_CLIENT_ID")
+		client_secret = os.getenv("ALTEIA_CLIENT_SECRET")
+		if not url or not client_id or not client_secret:
+			logger.error('Plateform URL, client id or client secret not set')
+			return
+
+	sdk = SDK(
+		url=url,
+		client_id=client_id,
+		client_secret=client_secret,
+		connection={'disable_ssl_certificate': True},
+	)
+
 
 	new_dataset = sdk.datasets.create_pcl_dataset(	name='sampled point cloud',
 														project=project_id,
