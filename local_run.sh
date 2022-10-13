@@ -8,14 +8,19 @@
 
 
 
-docker build -t pcvs3d .
-docker run -it -v work_dir:/home/work_dir --env DELAIRSTACK_PROCESS_WORKDIR='/home/work_dir/' --name mesh2pc_1 mesh2pc
+# docker build -t pcvs3d .
+# docker run -it -v work_dir:/home/work_dir --env DELAIRSTACK_PROCESS_WORKDIR='/home/work_dir/' --name mesh2pc_1 mesh2pc
 
 
-docker run -it -v C:\Users\michael.delagarde\Documents\DEV\mesh2pc\work_dir:/home/work_dir -e DELAIRSTACK_PROCESS_WORKDIR='/home/work_dir/' --name mesh2pc_1 mesh2pc
-docker run -it -v C:\Users\michael.delagarde\Documents\DEV\CustomAnalytics\mesh2pc\python:/home/python -e DELAIRSTACK_PROCESS_WORKDIR='/home/work_dir/' --name mesh2pc_1 mesh2pc
+# docker run -it -v C:\Users\michael.delagarde\Documents\DEV\mesh2pc\work_dir:/home/work_dir -e DELAIRSTACK_PROCESS_WORKDIR='/home/work_dir/' --name mesh2pc_1 mesh2pc
+# docker run -it -v C:\Users\michael.delagarde\Documents\DEV\CustomAnalytics\mesh2pc\python:/home/python -e DELAIRSTACK_PROCESS_WORKDIR='/home/work_dir/' --name mesh2pc_1 mesh2pc
 
 
-xvfb-run CloudCompare -SILENT \
--O ./untitled1.obj \
--SAMPLE_MESH POINTS 500000
+# xvfb-run CloudCompare -SILENT \
+# -O ./untitled1.obj \
+# -SAMPLE_MESH POINTS 500000
+
+
+#push to docker hub
+docker build -t docker.io/michaeldelagarde/mesh2pc .
+docker push docker.io/michaeldelagarde/mesh2pc:latest

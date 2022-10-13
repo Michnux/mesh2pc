@@ -1,17 +1,18 @@
 import alteia
+import os
 
 
 
 def upload_dataset(file_path, project_id, mission_id, script_dir, hsrs, vsrs):
 
 	url = os.getenv("ALTEIA_PLATEFORM_URL")
-		client_id = os.getenv("ALTEIA_CLIENT_ID")
-		client_secret = os.getenv("ALTEIA_CLIENT_SECRET")
-		if not url or not client_id or not client_secret:
-			logger.error('Plateform URL, client id or client secret not set')
-			return
+	client_id = os.getenv("ALTEIA_CLIENT_ID")
+	client_secret = os.getenv("ALTEIA_CLIENT_SECRET")
+	if not url or not client_id or not client_secret:
+		print('Plateform URL, client id or client secret not set')
+		return
 
-	sdk = SDK(
+	sdk = alteia.SDK(
 		url=url,
 		client_id=client_id,
 		client_secret=client_secret,
@@ -33,4 +34,4 @@ def upload_dataset(file_path, project_id, mission_id, script_dir, hsrs, vsrs):
 
 if __name__ == "__main__":
 
-	upload_dataset('../work_dir/max.tif', '61c1d5a73e614e00085c6a01', '61c4aeffd730570008b5e7c9', './')
+	upload_dataset('../work_dir/max.tif', '61c1d5a73e614e00085c6a01', '61c4aeffd730570008b5e7c9', './', '', '')
